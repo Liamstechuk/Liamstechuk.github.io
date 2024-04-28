@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bank Company Dashboard</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f5f5f5;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: #2c3e50;
+            color: #ffffff;
+            padding: 20px 0;
+            text-align: center;
+            font-size: 32px;
+        }
+
+        nav {
+            background-color: #34495e;
+            color: #ffffff;
+            padding: 15px 0;
+            text-align: center;
+        }
+
+        nav a {
+            margin: 0 20px;
+            color: #ffffff;
+            text-decoration: none;
+            transition: color 0.3s ease-in-out;
+        }
+
+        nav a:hover {
+            color: #1abc9c;
+        }
+
+        .dashboard {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            padding: 40px;
+        }
+
+        .card {
+            background-color: #ffffff;
+            border-radius: 15px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            text-align: center;
+            transition: transform 0.3s ease-in-out;
+            cursor: pointer;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+        }
+
+        .card h3 {
+            color: #2c3e50;
+            font-size: 24px;
+            margin-bottom: 15px;
+        }
+
+        .card p {
+            color: #6c7a89;
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        Bank Company Dashboard
+    </header>
+
+    <nav>
+        <a href="#">Dashboard</a>
+        <a href="#">Accounts</a>
+        <a href="#">Transactions</a>
+        <a href="#">Reports</a>
+        <a href="#">Settings</a>
+    </nav>
+
+    <div class="dashboard">
+        <div class="card">
+            <h3>Total Accounts</h3>
+            <p>5,432</p>
+        </div>
+
+        <div class="card">
+            <h3>Total Transactions</h3>
+            <p>12,543</p>
+        </div>
+
+        <div class="card">
+            <h3>Total Deposits</h3>
+            <p>$2,345,678</p>
+        </div>
+
+        <div class="card">
+            <h3>Total Withdrawals</h3>
+            <p>$1,234,567</p>
+        </div>
+
+        <div class="card">
+            <h3>Today's Transactions</h3>
+            <p>543</p>
+        </div>
+
+        <div class="card">
+            <h3>Pending Approvals</h3>
+            <p>12</p>
+        </div>
+    </div>
+
+    <footer>
+        &copy; 2024 Bank Company LTD
+    </footer>
+</body>
+</html>
