@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exposure Document for Frazer Horley</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        .container {
+            max-width: 600px;
+            margin: auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .header {
+            text-align: center;
+        }
+        .content {
+            margin-top: 20px;
+        }
+        .address {
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+        .description {
+            margin-bottom: 20px;
+        }
+        .image-container {
+            text-align: center;
+        }
+        .image-container img {
+            max-width: 100%;
+            height: auto;
+            border: 1px solid #ccc;
+            padding: 5px;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Exposure Document for Frazer Horley</h1>
+        </div>
+        <div class="content">
+            <p class="address">Frazer Horleys Address: cf446ul abergwawr cottage, now im not exposing his house number bc im not horrible like that </p>
+            <p class="description">Frazer Horley gave me his address. I did not illegally obtain it.</p>
+            <p class="description">He has been harassing me, telling me hes glad my nans dead, and messaging my mum. Additionally, he owns an illegal legal company.</p>
+            <div class="image-container">
+                <img src="proof1.png" alt="Proof Image">
+            </div>
+        </div>
+    </div>
+</body>
+</html>
