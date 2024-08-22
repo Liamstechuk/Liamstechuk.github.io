@@ -17,6 +17,7 @@
             background: url('background1.png') no-repeat center center fixed;
             background-size: cover;
             color: white;
+            position: relative;
         }
 
         .container {
@@ -45,6 +46,23 @@
             display: inline-block;
             box-sizing: border-box;
         }
+
+        .credits-button {
+            position: absolute;
+            bottom: 10px;
+            left: 10px;
+            font-size: 14px;
+            background: rgba(0, 0, 0, 0.5);
+            color: white;
+            padding: 8px 12px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .credits-button:hover {
+            background: rgba(0, 0, 0, 0.7);
+        }
     </style>
 </head>
 <body>
@@ -54,12 +72,14 @@
         <div class="text" id="dynamicText">👋 Hey, I'm Liam!</div>
     </div>
 
+    <div class="credits-button" onclick="showCredits()">Credits</div>
+
     <script>
         const phrases = [
             "👋 Hey, I'm Liam!",
-            "I'm a site developer based in the UK!",
-            "I specalise in HTML & PHP",
-            "I've been working in radio for 4 years."
+            "I'm a site developer.",
+            "I love coding.",
+            "Let's build something great!"
         ];
 
         let i = 0;
@@ -104,6 +124,10 @@
         }
 
         loop();
+
+        function showCredits() {
+            alert("Site hosted by GitHub | Credits: StefCodes - Stefcodes.co.uk | DJ Liam - Coding the site. | Rewind Radio - Providing a new feature coming soon...");
+        }
     </script>
 </body>
 </html>
