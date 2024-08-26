@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ANPR CCTV Viewing Site</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #333;
+        }
+        img {
+            max-width: 100%;
+            max-height: 100%;
+            border: 5px solid #fff;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <img id="cctvFeed" src="https://trafficcameras.uk/cameras/517.jpg?1724682064524" alt="CCTV Camera Feed">
+
+    <script>
+        let cameraUrls = [
+            "https://trafficcameras.uk/cameras/517.jpg?1724682064524",
+            "https://trafficcameras.uk/cameras/339.jpg?=1724682257"
+        ];
+        let currentIndex = 0;
+
+        function switchCamera() {
+            currentIndex = (currentIndex + 1) % cameraUrls.length;
+            document.getElementById("cctvFeed").src = cameraUrls[currentIndex];
+        }
+
+        setInterval(switchCamera, 30000); // Switch image every 30 seconds
+    </script>
+</body>
+</html>
