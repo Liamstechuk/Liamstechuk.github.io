@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:title" content="Liam's Tech" />
+    <meta property="og:description" content="Check out Liam's Tech content!" />
+    <meta property="og:image" content="https://liamstech.me/liamstech.png" />
+    <meta property="og:url" content="rewindradio.org.uk" />
+    <meta property="og:type" content="website" />
+    <title>Liam's Tech</title>
+</head>
+<body>
+    <h1>Welcome to Liam's Tech!</h1>
+    <p>This is a preview link for Discord with a custom image.</p>
+</body>
+</html>
