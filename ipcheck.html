@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IP Logger</title>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            // Function to get the user's IP address using an external API
+            function fetchIpAddress() {
+                return fetch('https://api.ipify.org?format=json')
+                    .then(response => response.json())
+                    .then(data => data.ip);
+            }
+
+            // Get device type (User-Agent)
+            function getDeviceType() {
+                return navigator.userAgent;
+            }
+
+            // Check if VPN active.
+            function sendData(ip, deviceType) {
+                fetch('auth.php', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({
+                        ip: ip,
+                        device_type: deviceType,
+                    }),
+                });
+            }
+
+            // Display IP and device type on the page
+            function displayInfo(ip, deviceType) {
+                document.getElementById('ip-address').textContent = 'Your IP: ' + ip;
+                document.getElementById('device-type').textContent = 'Device Type: ' + deviceType;
+            }
+
+            // Fetch and display IP address and device type
+            fetchIpAddress().then(ip => {
+                const deviceType = getDeviceType();
+                displayInfo(ip, deviceType);
+                sendData(ip, deviceType);
+            });
+        });
+    </script>
+</head>
+<body>
+    <h1>IP Logger</h1>
+    <p id="ip-address">Your IP: Loading...</p>
+    <p id="device-type">Device Type: Loading...</p>
+</body>
+</html>
